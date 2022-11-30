@@ -1,4 +1,5 @@
 function removeACharacter(arr,c){
     var indexOfC=arr.indexOf(c)
-    return arr.splice(indexOfC,1)
+    arr.splice(indexOfC,1)
+    return arr
 }
