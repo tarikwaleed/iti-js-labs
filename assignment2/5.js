@@ -5,5 +5,4 @@ function maxNumberInArray(arr){
         max=arr[i]
     }
     return max
-
 }
