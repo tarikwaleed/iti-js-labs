@@ -10,15 +10,15 @@ function getData() {
 function setData() {
     var userName= document.getElementById("user-name").value; 
     var password=document.getElementById("password").value
-
-    // var data = {
-    //     "firstName": "Ahmed",
-    //     "lastName": "Mohamed",
-    //     "age": 30
-    // }
     localStorage.setItem("user-name", userName)
     localStorage.setItem("password", password)
-    //  sessionStorage.setItem("userData",JSON.stringify(data))
-
     alert("Data Saved!!")
+}
+
+
+function setCockie() {
+    var userName= document.getElementById("user-name").value; 
+    var password=document.getElementById("password").value
+    document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+    alert("Cockies Set Successfully")
 }
