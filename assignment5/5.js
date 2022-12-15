@@ -29,9 +29,14 @@ xhttp.onreadystatechange = function () {
             optionElement.appendChild(document.createTextNode(allUsers[i].first_name));
             selectElement.appendChild(optionElement);
         }
+        selectElement.addEventListener('change', function () {
+            console.log("onchanged called")
+            console.log(allUsers[selectElement.selectedIndex].avatar)
+            var avatar = document.getElementById("avatar")
+            avatar.src = allUsers[selectElement.selectedIndex].avatar
+        })
+        // selectElement.setAttribute("onchange", GetAvatar(selectElement.options[selectElement.selectedIndex].value))
         document.getElementsByTagName("body")[0].appendChild(selectElement)
-
-
     }
 }
 xhttp.open("GET", `https://reqres.in/api/users`, true);
