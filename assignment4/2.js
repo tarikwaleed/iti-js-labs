@@ -23,6 +23,4 @@ function changeColor() {
         var randomNumber = Math.floor(Math.random() * 10)
         divs[i].style.backgroudColor = colorArray[randomNumber];
     }
-
-
 }
